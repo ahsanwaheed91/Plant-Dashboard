@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Layout, Button, Flex } from 'antd'
+import Siderbar from './Components/Sider';
+import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
+import CustomHeader from './Components/Header';
+import './App.css'
+import MainContent from './Components/MainContent';
+import SideContent from './Components/SideContent';
 
-function App() {
+
+
+const { Sider, Header, Content } = Layout;
+const App = () => {
+  const [collapsed, setcollapsed] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout>
+      <Sider theme='light' trigger={null} collapsible collapsed={collapsed} className='Sider' >
+        <Siderbar />
+        <Button type='text' icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />} onClick={() => setcollapsed(!collapsed)} className='trigger-btn' />
+      </Sider>
+      <Layout>
+        <Header className='header'>
+          <CustomHeader />
+        </Header>
+        <Content className='content'>
+          <Flex gap='large'>
+            <MainContent />
+            <SideContent />
+          </Flex>
+        </Content>
+      </Layout>
+    </Layout>
+  )
 }
 
-export default App;
+export default App
