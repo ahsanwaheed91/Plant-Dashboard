@@ -17,8 +17,8 @@ const ProductLists = () => {
     <Flex align='center' gap='large'>
         {PlantData.map((Plant)=>(
             <Card key={Plant.id} hoverable className='plant-card'>
-                <Image src={Plant.picture} style={{width:'125px'}} />
-                <Meta title={Plant.name} style={{marginTop:'0.5rem'}}/>
+                <Image src={Plant.picture} style={{width:'130px'}} />
+                <Meta title={Plant.name} style={{marginTop:'1rem'}}/>
             </Card>
         ))}
 
