@@ -18,7 +18,7 @@ const SellerLists = () => {
                 </Flex>
                 <Card>
                     <Flex align='center' justify='space evenly'>
-                        <Avatar.Group maxCount={5}
+                        <Avatar.Group max={{count:5}}
                             maxPopoverTrigger='click'
                             size={'large'}
                             maxStyle={{

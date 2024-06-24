@@ -13,7 +13,7 @@ const CustomHeader = () => {
                 </Typography.Title>
             <Flex align='center' gap='3rem'>
                 <Search placeholder='Search Dashboard' allowClear />
-                <Flex align='center' gap='10px'>
+                <Flex align='center' gap='0.7rem'>
                     <MessageOutlined  className='header-icon'/>
                     <NotificationOutlined className='header-icon' />
                     <Avatar icon={<UserOutlined/>}/>
