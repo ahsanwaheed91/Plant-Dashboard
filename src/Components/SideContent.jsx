@@ -1,8 +1,14 @@
 import React from 'react'
+import {Flex } from 'antd'
+import Content from './Content'
+import Activity from './Activity'
 
 const SideContent = () => {
   return (
-    <div style={{width:300}}>SideContent</div>
+    <Flex vertical gap='2.3rem' style={{width:300}}>
+      <Content/>
+      <Activity/>
+    </Flex>
   )
 }
 

@@ -80,3 +80,11 @@
 .featured-sellers {
   flex: 1;
 }
+
+.divider{
+  border: 2px solid green;
+  height: 50px;
+}
+.card{
+  background-image: linear-gradient(to bottom, #4c7f79 , #87e8de);
+}
